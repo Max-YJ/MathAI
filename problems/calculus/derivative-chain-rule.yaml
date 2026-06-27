@@ -1,0 +1,24 @@
+id: calculus-derivative-001
+title: 复合函数求导
+difficulty: 3
+tags: [calculus, derivative, chain-rule]
+source: original
+statement: |
+  求函数 $f(x) = \sin(x^2 + 1)$ 的导数 $f'(x)$。
+hints:
+  - 这是复合函数，使用链式法则
+  - 令 $u = x^2 + 1$，则 $f = \sin(u)$
+solution:
+  approach: chain rule
+  steps:
+    - "令 $u = x^2 + 1$"
+    - '$\frac{du}{dx} = 2x$'
+    - '$f''(x) = \cos(u) \cdot \frac{du}{dx} = 2x\cos(x^2+1)$'
+  answer: "$f'(x) = 2x\\cos(x^2+1)$"
+verification:
+  type: symbolic
+  expression: "sp.diff(sp.sin(x**2 + 1), x)"
+  expected: "2*x*cos(x**2 + 1)"
+metadata:
+  created: 2025-06-27
+  author: MathAI

@@ -1,0 +1,31 @@
+name: Feature Request
+description: 建议新功能、新 Skill 或工具改进
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决什么问题？
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议的方案
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 相关领域
+      options:
+        - problems
+        - knowledge
+        - tools
+        - skills
+        - links
+        - brainstorm
+        - resources
+        - hot-topics
+        - other

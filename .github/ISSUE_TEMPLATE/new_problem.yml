@@ -1,0 +1,37 @@
+name: New Problem
+description: 提交新题目到问题库
+title: "[problem] "
+labels: ["problem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请使用 `problems/templates/problem-template.yaml` 格式，并直接提交 PR（推荐）或在此描述题目。
+  - type: input
+    id: title
+    attributes:
+      label: 题目标题
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: 难度
+      options: ["1", "2", "3", "4", "5"]
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: 标签（逗号分隔）
+      placeholder: algebra, quadratic
+  - type: textarea
+    id: statement
+    attributes:
+      label: 题目陈述
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 参考解答（可选）

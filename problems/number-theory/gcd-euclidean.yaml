@@ -1,0 +1,25 @@
+id: number-theory-gcd-001
+title: 欧几里得算法求最大公约数
+difficulty: 2
+tags: [number-theory, gcd, euclidean-algorithm]
+source: original
+statement: |
+  使用欧几里得算法求 $\gcd(1071, 462)$。
+hints:
+  - $\gcd(a, b) = \gcd(b, a \bmod b)$
+  - 重复直到余数为 0
+solution:
+  approach: Euclidean algorithm
+  steps:
+    - '$1071 = 2 \times 462 + 147$'
+    - '$462 = 3 \times 147 + 21$'
+    - '$147 = 7 \times 21 + 0$'
+    - '余数为 0，故 $\gcd(1071, 462) = 21$'
+  answer: "21"
+verification:
+  type: numeric
+  expression: "math.gcd(1071, 462)"
+  expected: 21
+metadata:
+  created: 2025-06-27
+  author: MathAI
