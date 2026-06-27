@@ -1,0 +1,24 @@
+id: algebra-quadratic-001
+title: 一元二次方程求根
+difficulty: 2
+tags: [algebra, quadratic, roots, factoring]
+source: original
+statement: |
+  求方程 $x^2 - 5x + 6 = 0$ 的所有实根。
+hints:
+  - 观察常数项 6，尝试找两个数相乘为 6、相加为 -5
+  - 或使用求根公式 $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$
+solution:
+  approach: factoring
+  steps:
+    - "$x^2 - 5x + 6 = (x-2)(x-3) = 0$"
+    - "$x = 2$ 或 $x = 3$"
+  answer: '$x \in \{2, 3\}$'
+verification:
+  type: symbolic
+  expression: "sp.solve(x**2 - 5*x + 6, x)"
+  expected: [2, 3]
+metadata:
+  created: 2025-06-27
+  author: MathAI
+  notes: 基础因式分解例题

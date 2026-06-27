@@ -1,0 +1,28 @@
+name: Bug Report
+description: 报告工具错误或题目/知识库中的数学错误
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽可能详细地描述问题。若是数学错误，请说明正确内容或参考文献。
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 发生了什么？期望是什么？
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: 相关文件路径
+      placeholder: e.g. problems/algebra/quadratic-roots.yaml
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. pip install -r tools/requirements.txt
+        2. python -m tools.verify --problem ...

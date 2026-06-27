@@ -1,0 +1,33 @@
+# 题目模板 — 复制此文件到对应领域目录并填写
+
+id: domain-topic-001          # 唯一 ID，格式：领域-主题-序号
+title: 题目标题
+difficulty: 2                 # 1-5，见 problems/README.md
+tags:
+  - tag1
+  - tag2
+source: original              # 来源：original / aime-2024 / textbook-xxx 等
+statement: |
+  在此书写完整的题目陈述。
+  支持多行，可使用 LaTeX：$f(x) = x^2 + 1$
+
+hints:                        # 可选，由浅入深的提示
+  - 第一个提示
+  - 第二个提示
+
+solution:                     # 可选，参考解答
+  approach: brief description of method
+  steps:
+    - "步骤 1"
+    - "步骤 2"
+  answer: "最终答案"
+
+verification:                 # 可选，供 tools.verify 自动检验
+  type: symbolic              # symbolic | numeric | manual
+  expression: ""            # SymPy 表达式或 Python 代码
+  expected: null              # 期望结果
+
+metadata:
+  created: 2025-06-27
+  author: ""
+  notes: ""

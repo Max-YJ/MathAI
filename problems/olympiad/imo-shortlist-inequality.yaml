@@ -1,0 +1,21 @@
+id: olympiad-inequality-001
+title: AM-GM 不等式应用
+difficulty: 4
+tags: [olympiad, inequality, am-gm]
+source: original
+statement: |
+  设 $a, b, c > 0$ 且 $a + b + c = 3$，证明：
+  $$a^2 + b^2 + c^2 \geq 3$$
+hints:
+  - 由 Cauchy-Schwarz 或直接用 AM-GM
+  - 考虑 $(a+b+c)^2$ 与 $a^2+b^2+c^2$ 的关系
+solution:
+  approach: Cauchy-Schwarz / power mean
+  steps:
+    - '由 Cauchy-Schwarz：$(1^2+1^2+1^2)(a^2+b^2+c^2) \geq (a+b+c)^2 = 9$'
+    - '故 $a^2+b^2+c^2 \geq 3$'
+  answer: "得证"
+metadata:
+  created: 2025-06-27
+  author: MathAI
+  notes: 经典不等式，适合 olympiad-proof skill
