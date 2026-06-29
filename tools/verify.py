@@ -20,7 +20,7 @@ def verify_symbolic(verification: dict) -> tuple[bool, str]:
     expected = verification.get("expected")
 
     x = sp.Symbol("x")
-    local_dict = {"x": x, "sp": sp}
+    local_dict = {"x": x, "sp": sp, "E": sp.E, "exp": sp.exp}
 
     result = eval(expr_str, {"__builtins__": {}}, local_dict)
 

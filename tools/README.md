@@ -12,6 +12,7 @@ pip install -r tools/requirements.txt
 
 | 文件 | 功能 |
 |------|------|
+| [`calculus_verify.py`](calculus_verify.py) | **微积分严格校验** — 导数/积分/极限/定积分/步骤链 |
 | [`sympy_helpers.py`](sympy_helpers.py) | SymPy 符号计算封装 |
 | [`latex_utils.py`](latex_utils.py) | LaTeX 与 SymPy 互转 |
 | [`verify.py`](verify.py) | 根据题目 YAML 自动验证答案 |
@@ -28,10 +29,19 @@ print(differentiate("sin(x**2 + 1)", "x"))
 print(solve_equation("x**2 - 5*x + 6", "x"))
 ```
 
+### 微积分逐步校验
+
+```bash
+python3 -m tools.calculus_verify derivative --expr "sin(x**2)" --claimed "2*x*cos(x**2)"
+python3 -m tools.calculus_verify integral --expr "x*exp(x)" --claimed "exp(x)*(x-1)"
+python3 -m tools.calculus_verify limit --expr "(exp(x)-1)/x" --point 0 --claimed 1
+python3 -m tools.calculus_verify definite --expr "x**2" --a 0 --b 1 --claimed "1/3"
+```
+
 ### 验证题目
 
 ```bash
-python -m tools.verify --problem problems/algebra/quadratic-roots.yaml
+python3 -m tools.verify --problem problems/calculus/limit-lhopital.yaml
 ```
 
 ### 检索题目

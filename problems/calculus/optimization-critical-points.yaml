@@ -1,0 +1,26 @@
+id: calculus-optimization-001
+title: 闭区间上求最值
+difficulty: 3
+tags: [calculus, optimization, critical-points]
+source: original
+statement: |
+  求函数 $f(x) = x^3 - 3x$ 在区间 $[-2, 2]$ 上的最大值与最小值。
+hints:
+  - 求 $f'(x)=0$ 的驻点
+  - 比较驻点与端点处的函数值
+solution:
+  approach: critical points + endpoints
+  steps:
+    - '$f''(x) = 3x^2 - 3 = 3(x-1)(x+1)$'
+    - '驻点：$x = -1, 1$'
+    - '$f(-2)=-2$，$f(-1)=2$，$f(1)=-2$，$f(2)=2$'
+    - '最大值为 $2$（在 $x=-1$ 和 $x=2$），最小值为 $-2$（在 $x=-2$ 和 $x=1$）'
+  answer: '最大值 $2$，最小值 $-2$'
+verification:
+  type: symbolic
+  expression: "[sp.diff(x**3 - 3*x, x).subs(x, -1), sp.diff(x**3 - 3*x, x).subs(x, 1)]"
+  expected: [0, 0]
+metadata:
+  created: 2025-06-27
+  author: MathAI
+  notes: 驻点验证；最值需比较端点，可用数值抽检

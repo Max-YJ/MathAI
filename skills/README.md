@@ -6,10 +6,20 @@
 
 | Skill | 适用场景 |
 |-------|----------|
+| [`calculus-solver`](calculus-solver/SKILL.md) | **微积分严格求解**，每步 `calculus_verify` 校验 |
+| [`paper-deep-read`](paper-deep-read/SKILL.md) | **论文精读**与知识沉淀 |
 | [`solve-step-by-step`](solve-step-by-step/SKILL.md) | 通用逐步推导，适合大多数计算题 |
 | [`olympiad-proof`](olympiad-proof/SKILL.md) | 竞赛级证明题，强调严谨性与创造性 |
 | [`numerical-computation`](numerical-computation/SKILL.md) | 数值计算、近似、编程验证 |
 | [`geometry-visualization`](geometry-visualization/SKILL.md) | 几何题，结合图形与坐标法 |
+
+### 论文衍生 Skills（`from-paper/`）
+
+| Skill | 来源 |
+|-------|------|
+| [`process-supervision`](from-paper/process-supervision/SKILL.md) | Let's Verify Step by Step (2023) |
+
+详见 [`from-paper/README.md`](from-paper/README.md)。
 
 ## 使用方式
 

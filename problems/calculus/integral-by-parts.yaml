@@ -1,0 +1,24 @@
+id: calculus-integral-parts-001
+title: 分部积分
+difficulty: 3
+tags: [calculus, integral, integration-by-parts]
+source: original
+statement: |
+  求不定积分 $\displaystyle\int x e^x \, dx$。
+hints:
+  - 使用分部积分 $\int u\,dv = uv - \int v\,du$
+  - 令 $u = x$，$dv = e^x dx$
+solution:
+  approach: integration by parts (LIATE)
+  steps:
+    - '令 $u=x$，$dv=e^x dx$，则 $du=dx$，$v=e^x$'
+    - '$\int x e^x dx = x e^x - \int e^x dx$'
+    - '$= x e^x - e^x + C = e^x(x-1) + C$'
+  answer: '$e^x(x-1) + C$'
+verification:
+  type: symbolic
+  expression: "sp.diff(sp.exp(x)*(x-1), x)"
+  expected: "x*exp(x)"
+metadata:
+  created: 2025-06-27
+  author: MathAI
