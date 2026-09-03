@@ -8,6 +8,12 @@
 
 ### Added
 
+- **数学知识 × 逻辑推理框架**：原子推理六元组、验证强度与可信边界
+- **Lean 形式化模块**：Lean 4 / mathlib 项目，包含逻辑、代数和微积分证明
+- **mathlib 映射表**：从知识条目到可复用 Lean 定理与 tactic
+- **Lean 形式化 Skill**：自然语言陈述规范化、知识依赖、编译终验
+- **Lean 验证工具和 CI**：拒绝 `sorry` / `admit`，强制 `lake build`
+- “自然语言—Lean—中文解释”三栏经典案例
 - **微积分模块**：`knowledge/calculus/` 完整知识库（策略、极限、导数、积分、公式表）
 - **微积分严格求解 Skill**：`skills/calculus-solver/`，每步强制 `calculus_verify`
 - **微积分校验工具**：`tools/calculus_verify.py`（导数/积分/极限/定积分/步骤链）

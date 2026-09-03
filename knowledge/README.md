@@ -15,6 +15,7 @@
 | [`combinatorics/`](combinatorics/) | 组合：计数、图论基础 |
 | [`probability/`](probability/) | 概率与统计 |
 | [`problem-solving/`](problem-solving/) | 通用解题策略 |
+| [`formalization/`](formalization/) | **知识与逻辑推理**、Lean 严谨性、mathlib 映射 |
 
 ## 条目格式
 

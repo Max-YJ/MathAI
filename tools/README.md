@@ -13,6 +13,7 @@ pip install -r tools/requirements.txt
 | 文件 | 功能 |
 |------|------|
 | [`calculus_verify.py`](calculus_verify.py) | **微积分严格校验** — 导数/积分/极限/定积分/步骤链 |
+| [`verify_lean.py`](verify_lean.py) | **Lean 证明校验** — 禁止占位符并运行 `lake build` |
 | [`sympy_helpers.py`](sympy_helpers.py) | SymPy 符号计算封装 |
 | [`latex_utils.py`](latex_utils.py) | LaTeX 与 SymPy 互转 |
 | [`verify.py`](verify.py) | 根据题目 YAML 自动验证答案 |
@@ -43,6 +44,14 @@ python3 -m tools.calculus_verify definite --expr "x**2" --a 0 --b 1 --claimed "1
 ```bash
 python3 -m tools.verify --problem problems/calculus/limit-lhopital.yaml
 ```
+
+### 验证 Lean 证明
+
+```bash
+python3 tools/verify_lean.py
+```
+
+需要预先安装 elan / Lake；详见 [`formal/README.md`](../formal/README.md)。
 
 ### 检索题目
 

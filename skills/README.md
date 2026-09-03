@@ -8,6 +8,7 @@
 |-------|----------|
 | [`calculus-solver`](calculus-solver/SKILL.md) | **微积分严格求解**，每步 `calculus_verify` 校验 |
 | [`paper-deep-read`](paper-deep-read/SKILL.md) | **论文精读**与知识沉淀 |
+| [`lean-formalization`](lean-formalization/SKILL.md) | **Lean 形式化** — 从自然语言命题到 kernel 检查 |
 | [`solve-step-by-step`](solve-step-by-step/SKILL.md) | 通用逐步推导，适合大多数计算题 |
 | [`olympiad-proof`](olympiad-proof/SKILL.md) | 竞赛级证明题，强调严谨性与创造性 |
 | [`numerical-computation`](numerical-computation/SKILL.md) | 数值计算、近似、编程验证 |

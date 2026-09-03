@@ -1,0 +1,34 @@
+name: Lean
+
+on:
+  push:
+    paths:
+      - "formal/lean/**"
+      - "tools/verify_lean.py"
+      - ".github/workflows/lean.yml"
+  pull_request:
+    paths:
+      - "formal/lean/**"
+      - "tools/verify_lean.py"
+      - ".github/workflows/lean.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lean
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Update dependencies
+        working-directory: formal/lean
+        run: lake update
+      - name: Download mathlib cache
+        working-directory: formal/lean
+        run: lake exe cache get
+      - name: Verify proofs
+        run: python3 tools/verify_lean.py
