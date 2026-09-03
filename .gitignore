@@ -25,5 +25,8 @@ Thumbs.db
 .coverage
 htmlcov/
 
+# Lean / Lake build artifacts
+.lake/
+
 # Jupyter
 .ipynb_checkpoints/

@@ -18,6 +18,8 @@ def scan_placeholders(project: Path) -> list[str]:
     """Return source locations containing forbidden proof placeholders."""
     failures: list[str] = []
     for path in sorted(project.rglob("*.lean")):
+        if ".lake" in path.relative_to(project).parts:
+            continue
         for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             if PLACEHOLDER.search(line) and not line.lstrip().startswith("--"):
                 failures.append(f"{path.relative_to(project)}:{number}: {line.strip()}")
