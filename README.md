@@ -14,7 +14,28 @@
 | [`brainstorm/`](brainstorm/) | **头脑风暴** — 解题策略模板与思维框架 |
 | [`maintenance/`](maintenance/) | **维护管理** — 贡献指南、变更日志、治理规范 |
 | [`resources/`](resources/) | **资源收集** — 教材、课程、数据集等学习资源 |
+| [`papers/`](papers/) | **论文精读** — 精读模板、知识沉淀、论文衍生 Skills |
 | [`hot-topics/`](hot-topics/) | **热点榜单** — 数学与 AI 交叉领域的热点追踪 |
+
+## 两大核心模块
+
+### 用 AI 解微积分
+
+| 资源 | 说明 |
+|------|------|
+| [`knowledge/calculus/`](knowledge/calculus/) | 策略、公式、极限/导数/积分知识 |
+| [`skills/calculus-solver/`](skills/calculus-solver/) | **严格求解 Skill** — 每步 SymPy 校验 |
+| [`tools/calculus_verify.py`](tools/calculus_verify.py) | 导数/积分/极限/步骤链验证 |
+| [`problems/calculus/`](problems/calculus/) | 5 道经典案例（含自动验证） |
+
+### 用 AI 精读论文
+
+| 资源 | 说明 |
+|------|------|
+| [`papers/`](papers/) | 精读模板、知识沉淀目录 |
+| [`skills/paper-deep-read/`](skills/paper-deep-read/) | **论文精读 Skill** |
+| [`skills/from-paper/`](skills/from-paper/) | 从论文提炼的可复用 Skills |
+| [`papers/digests/`](papers/digests/) | 已完成精读（示例：过程监督论文） |
 
 ## 快速开始
 
@@ -29,9 +50,11 @@ pip install -r tools/requirements.txt
 在 Cursor 中打开本仓库，根据题目类型选用对应 Skill：
 
 - 逐步推导 → `skills/solve-step-by-step/`
+- **微积分（严格校验）** → `skills/calculus-solver/`
 - 竞赛证明 → `skills/olympiad-proof/`
 - 数值计算 → `skills/numerical-computation/`
 - 几何可视化 → `skills/geometry-visualization/`
+- **论文精读** → `skills/paper-deep-read/`
 
 ### 3. 添加新题目
 
@@ -40,7 +63,8 @@ pip install -r tools/requirements.txt
 ### 4. 验证答案
 
 ```bash
-python -m tools.verify --problem problems/algebra/quadratic-roots.yaml
+python3 -m tools.verify --problem problems/algebra/quadratic-roots.yaml
+python3 -m tools.calculus_verify derivative --expr "sin(x**2)" --claimed "2*x*cos(x**2)"
 ```
 
 ## 问题格式

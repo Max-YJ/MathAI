@@ -6,6 +6,7 @@
 
 | 子目录 | 内容 |
 |--------|------|
+| [`calculus/`](calculus/) | **微积分** — 策略、极限、导数、积分、公式（AI 解题专用） |
 | [`algebra/`](algebra/) | 代数：方程、不等式、多项式 |
 | [`calculus/`](calculus/) | 微积分：极限、导数、积分 |
 | [`linear-algebra/`](linear-algebra/) | 线性代数：矩阵、特征值 |
