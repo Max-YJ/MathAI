@@ -16,6 +16,7 @@
 | [`resources/`](resources/) | **资源收集** — 教材、课程、数据集等学习资源 |
 | [`papers/`](papers/) | **论文精读** — 精读模板、知识沉淀、论文衍生 Skills |
 | [`hot-topics/`](hot-topics/) | **热点榜单** — 数学与 AI 交叉领域的热点追踪 |
+| [`formal/`](formal/) | **形式化数学** — Lean 4 + mathlib 证明与三栏案例 |
 
 ## 两大核心模块
 
@@ -37,6 +38,16 @@
 | [`skills/from-paper/`](skills/from-paper/) | 从论文提炼的可复用 Skills |
 | [`papers/digests/`](papers/digests/) | 已完成精读（示例：过程监督论文） |
 
+### 数学知识 × 逻辑推理 × Lean
+
+| 资源 | 说明 |
+|------|------|
+| [`knowledge/formalization/`](knowledge/formalization/) | 原子推理结构、Lean 可信边界 |
+| [`knowledge/formalization/mathlib-mapping.md`](knowledge/formalization/mathlib-mapping.md) | 知识条目到 mathlib API 的映射 |
+| [`skills/lean-formalization/`](skills/lean-formalization/) | 自然语言证明转 Lean 的严格工作流 |
+| [`formal/lean/`](formal/lean/) | 可编译的逻辑、代数、微积分证明 |
+| [`formal/examples/`](formal/examples/) | “自然语言—Lean—中文解释”三栏案例 |
+
 ## 快速开始
 
 ### 1. 安装依赖
@@ -55,6 +66,7 @@ pip install -r tools/requirements.txt
 - 数值计算 → `skills/numerical-computation/`
 - 几何可视化 → `skills/geometry-visualization/`
 - **论文精读** → `skills/paper-deep-read/`
+- **形式化验证** → `skills/lean-formalization/`
 
 ### 3. 添加新题目
 
@@ -65,6 +77,7 @@ pip install -r tools/requirements.txt
 ```bash
 python3 -m tools.verify --problem problems/algebra/quadratic-roots.yaml
 python3 -m tools.calculus_verify derivative --expr "sin(x**2)" --claimed "2*x*cos(x**2)"
+python3 tools/verify_lean.py
 ```
 
 ## 问题格式
