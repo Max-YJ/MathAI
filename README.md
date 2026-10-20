@@ -17,6 +17,7 @@
 | [`papers/`](papers/) | **论文精读** — 精读模板、知识沉淀、论文衍生 Skills |
 | [`hot-topics/`](hot-topics/) | **热点榜单** — 数学与 AI 交叉领域的热点追踪 |
 | [`formal/`](formal/) | **形式化数学** — Lean 4 + mathlib 证明与三栏案例 |
+| [`canvases/`](canvases/) | **Cursor Canvas 课件** — AI 数学推导讲座与「数学领域 AI 最新进展」 |
 
 ## 两大核心模块
 
@@ -47,6 +48,15 @@
 | [`skills/lean-formalization/`](skills/lean-formalization/) | 自然语言证明转 Lean 的严格工作流 |
 | [`formal/lean/`](formal/lean/) | 可编译的逻辑、代数、微积分证明 |
 | [`formal/examples/`](formal/examples/) | “自然语言—Lean—中文解释”三栏案例 |
+
+## Cursor Canvas 课件
+
+仓库内提供可交互的 Cursor Canvas 课程课件（推导讲座 + 「数学领域 AI 最新进展」模块）：
+
+- 打开 [`canvases/ai-math-derivation-course.canvas.tsx`](canvases/ai-math-derivation-course.canvas.tsx)
+- 在 Cursor 中用 Canvas 预览/侧栏打开该文件即可浏览
+
+**EN:** Open the file above in Cursor and view it as a Canvas to follow the AI math derivation lecture and the “Latest Progress of AI in Mathematics” module.
 
 ## 快速开始
 
