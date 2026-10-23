@@ -1,4 +1,5 @@
 {
   "pipePlaying": false,
-  "pipelineIdx": 0
+  "pipelineIdx": 0,
+  "progressField": "algebra"
 }
